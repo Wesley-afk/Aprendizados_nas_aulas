@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.aprendizado;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author w.rocha
+ */
+public class Aprendizado {
+
+    public static void main(String[] args) throws IOException {
+       String s = "";
+       float nota1 = 0; float nota2 = 0; float media = 0;
+       DataInputStream dado;
+       System.out.println("Entre com a nota 1:");
+       dado = new DataInputStream(System.in);
+       //pega a informação do teclado
+       
+       s = dado.readLine();//Lê uma linha do teclado
+       nota1 = Float.parseFloat(s);//converte de strig para float
+       System.out.println("Entre com a nota 2:");
+       dado = new DataInputStream(System.in);
+       s = dado.readLine();
+       nota2 = Float.parseFloat(s);//converter de string para float
+       
+       //calcular a média das notas
+       media = (nota1 + nota2)/2;
+        System.out.println(media);
+    }
+}
